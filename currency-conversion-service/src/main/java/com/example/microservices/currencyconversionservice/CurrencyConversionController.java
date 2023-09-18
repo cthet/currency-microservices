@@ -47,10 +47,7 @@ public class CurrencyConversionController {
             @PathVariable String to,
             @PathVariable BigDecimal quantity){
 
-
-
         CurrencyConversion currencyConversion = proxy.retrieveExchangeValue(from, to);
-
 
         return new CurrencyConversion(currencyConversion.getId(),
                 from, to, quantity,
